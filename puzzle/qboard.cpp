@@ -14,7 +14,7 @@ void QBoard::InitLabels(qint32 s)
     QWidget* mainGameWidget = this->parentWidget();
     QSize gameBoardSize = mainGameWidget->size();
     QSize sizeLabel(gameBoardSize.width()/size-size, gameBoardSize.height()/size-size);
-    QFont* f = new QFont("Serif", 30, QFont::Bold);
+    QFont* f = new QFont("Serif", gameBoardSize.width()/size/4, QFont::Bold);
     label2D = new QBoardLabel**[size];
 
     for(int i = 0; i<size; ++i){
@@ -268,7 +268,7 @@ void QBoard::mix(){
     moveUp();
     moveLeft();
     moveLeft();
-    for(int i = 0; i<1000; ++i){
+    for(int i = 0; i<100000; ++i){
         int move = generator->bounded(4);
         //std::cout<<move<<std::endl;
         switch(move){

@@ -24,7 +24,7 @@ GameCollect::GameCollect(QWidget *parent)
     centralWidget->setObjectName("Central");
     centralWidget->setStyleSheet("QWidget#Central {background-image: url(:/Image1/North.jpg);}");
 
-    size = 6;
+    size = 7;
     mainLayout = new QHBoxLayout();
 
     centralWidget->setLayout(mainLayout);
